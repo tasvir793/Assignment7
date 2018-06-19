@@ -1,0 +1,129 @@
+Ques1:Write a java program to reverse a String?
+Ans1:
+package acadviewdemo1;
+public class ReverseString {public static void main(String args[]){
+        String Str="abcd";
+        System.out.println("Original String: "+Str);
+        String reverse="";
+    for(int i= Str.length()-1;i>=0;i--)
+    {
+        char x = Str.charAt(i);
+        reverse =reverse+x;
+        
+        System.out.println("Reversed string :"+reverse);
+        }
+    }
+        
+    }
+
+ Ques2:Write a java  program to generate all substrings of the String XYZ?
+Ans2:
+    package substring;
+
+    public class SubString {
+
+    
+    public static void main(String[] args) {
+       int i,j;
+       String str="xyz";
+       System.out.println("String is:"+str);
+       for(j=0;j<str.length();j++)
+       {
+           System.out.println(str.substring(j,j+1));
+       }
+    }
+    
+}
+   
+ Ques3:Write a java program to remove all vowels from the String?   
+Ans3:
+     package acadviewdemo1;
+    import java.util.Scanner;
+
+     public class Vowels {
+    public static void main(String[]args){
+        Scanner val=new Scanner(System.in);
+        System.out.print("enter the String:");
+        String str1=val.next();
+        String str2=str1.replaceAll("aeiouAEIOU","");
+        System.out.println("String without vowels:"+str2);
+        
+    }
+    
+}
+
+Ques4:Write a java program to print the following Pattern?
+       a
+       ab
+       abc
+Ans4: 
+    package stringpattern2;
+    public class StringPattern2 {
+
+    public static void main(String[] args) {
+        
+          int i,j;
+    char ch='a';
+    
+    for(i=0;i<3;i++)
+    {ch='a';
+        for(j=0;j<=i;j++)
+    {
+        System.out.print(ch); 
+        ch++;
+    }
+        System.out.println("");  
+    }
+    }    
+    }
+Ques5:Write a java program to check occurance of a String in another string,wher both strings are taken as input from the user?
+Ans5:
+   package acadviewdemo1;
+   import java.util.Scanner;
+
+
+public class Occurance {
+    public static void main(String[]args){
+        Scanner str1=new Scanner(System.in);
+        System.out.print("the first String is :");
+        String s1=str1.next();
+        Scanner str2=new Scanner(System.in);
+        System.out.print("the second string is:");
+        String s2=str2.next();
+        String s3;
+        int count=0;
+        int line1,line2;
+        line1=s1.length();
+        line2=s2.length();
+        for(int i=0;i<=line1-line2;i++)
+        {
+            s3=s1.substring(i,i+line2);
+        if(s3.equals(s2))
+            count++;
+    }
+    System.out.println(count);
+        
+    }
+}
+    
+
+Ques6:Write a java program to count the number of words in a sentence taken as input?
+Ans6:
+     package acadviewdemo1;
+     public class WordCount2 {
+    public static void main(String args[]){
+      int i;
+      String str="My Self Tasvir";
+      System.out.println("the sentence is :"+str);
+   int count=1;
+      for(i=0;i<=str.length()-1;i++){
+          if(str.charAt(i)==' '&& str.charAt(i+1)!=' ')
+          {
+              count++;
+              
+          }
+      }
+      System.out.println("the number of word in sentence"+ count);
+  }
+    
+}
